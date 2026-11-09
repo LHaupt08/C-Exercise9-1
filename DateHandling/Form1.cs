@@ -43,11 +43,11 @@ public partial class Form1 : Form
 
         int birthDay = birthDate.DayOfYear;
         int birthYear = birthDate.Year;
-        if (birthDay > currentDay) { birthYear += 1; }
+        if (birthDay >= currentDay) { birthYear += 1; }
 
         int curAge = currentYear - birthYear;
 
-        string msg = "Current Date: " + todaysDate.ToShortDateString() + "\n" + "Future Date: " + birthDate.ToShortDateString() + "\n" + "Age: " + curAge;
+        string msg = "Current Date: " + todaysDate.ToShortDateString() + "\n" + "Future Date: " + birthDate.ToShortDateString() + "\n" + "Age: " + curAge + " " + birthDay + " " + currentDay;
 
         MessageBox.Show(msg, "Age Calculation");
 
